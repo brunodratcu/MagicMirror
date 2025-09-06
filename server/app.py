@@ -603,6 +603,6 @@ def test_connection():
 if __name__ == '__main__':
     print("Magic Mirror - Servidor BLE Push")
     print(f"BLE disponível: {'Sim' if BLE_AVAILABLE else 'Não'}")
-    print("Servidor: http://localhost:5000")
+    print("Servidor: espelhomagico.vercel.app")
     
     app.run(host='0.0.0.0', port=5000, debug=False)
