@@ -27,7 +27,7 @@ MQTT_BROKER = "test.mosquitto.org"
 MQTT_PORT = 1883
 TOPIC_PREFIX = "space_mirror_hybrid"
 GRAPH_ENDPOINT = 'https://graph.microsoft.com/v1.0/'
-REDIRECT_URI = "http://localhost:5000/callback"
+REDIRECT_URI = "https://695fcf5a4f7dd32cdff65b45--meuespelhomagico.netlify.app/callback"
 
 # Scopes para delegated permissions (IMPORTANTE: usar openid e offline_access)
 DELEGATED_SCOPES = ['openid', 'profile', 'email', 'offline_access', 'Calendars.Read']
