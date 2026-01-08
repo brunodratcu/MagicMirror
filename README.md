@@ -39,22 +39,8 @@ GPIO 19        <-->  WR (Write)
 GND           <-->  GND
 ```
 
-## 📁 Estrutura do Projeto
-
-```
-magic-mirror/
-├── main.py          # Aplicação principal
-├── config.py        # Configurações do sistema
-├── font.py          # Sistema de fontes bitmap
-├── README.md        # Este arquivo
-└── examples/        # Exemplos e testes
-    ├── test_display.py
-    ├── test_font.py
-    └── demo_mode.py
-```
 
 ## 🚀 Instalação e Configuração
-
 ### 1. Preparação do Hardware
 1. Monte o display LCD shield no Raspberry Pi Pico
 2. Verifique todas as conexões conforme o esquema
@@ -94,30 +80,6 @@ import upip
 upip.install('umqtt.simple')
 ```
 
-## ▶️ Execução
-
-### Modo Normal
-```python
-# No terminal do Pico ou reinicie o dispositivo
-exec(open('main.py').read())
-```
-
-### Modos Especiais
-
-#### Modo Demonstração (sem WiFi)
-```python
-exec(open('examples/demo_mode.py').read())
-```
-
-#### Teste do Display
-```python
-exec(open('examples/test_display.py').read())
-```
-
-#### Teste das Fontes
-```python
-exec(open('examples/test_font.py').read())
-```
 
 ## 📊 Interface do Display
 
@@ -207,31 +169,8 @@ O sistema usa MQTT público para receber eventos de calendário de um servidor b
 2. **Aprovação**: Aguarda aprovação do servidor backend  
 3. **Sincronização**: Recebe eventos em tempo real
 
-### Formato de Eventos
-```json
-{
-  "events": [
-    {
-      "title": "Reunião de equipe",
-      "time": "09:00",
-      "duration": 60,
-      "location": "Sala de reuniões"
-    }
-  ]
-}
-```
 
 ## 🔍 Solução de Problemas
-
-### Display não Inicializa
-```
-Sintomas: Tela preta, sem resposta
-Soluções:
-1. Verificar todas as conexões de hardware
-2. Testar alimentação (5V para LCD, 3.3V para Pico)
-3. Executar teste isolado: test_display.py
-4. Verificar compatibilidade do display
-```
 
 ### WiFi não Conecta
 ```  
@@ -261,16 +200,6 @@ Soluções:
 2. Texto será normalizado automaticamente
 3. Testar com test_font.py
 4. Usar apenas caracteres ASCII se houver problemas
-```
-
-### MQTT não Conecta
-```
-Sintomas: "MQTT falhou", sem eventos
-Soluções:
-1. Sistema funciona sem MQTT (apenas relógio)
-2. Verificar firewall/proxy de rede
-3. Tentar brokers alternativos
-4. Aguardar - broker público pode estar temporariamente indisponível
 ```
 
 ## 📈 Monitoramento e Debug
@@ -330,32 +259,7 @@ Sempre faça backup do seu `config.py` personalizado antes de atualizações.
 - Limpar fisicamente o display conforme necessário
 - Atualizar configurações de horário se necessário (horário de verão)
 
-## 🤝 Contribuições
 
-Contribuições são bem-vindas! Por favor:
-
-1. Faça fork do projeto
-2. Crie uma branch para sua feature
-3. Faça commit das mudanças
-4. Envie pull request
-5. Documente alterações no código
-
-### Áreas para Contribuição
-- 🎨 Novos temas visuais
-- 🌐 Suporte a mais idiomas
-- 📱 Integração com outros serviços
-- 🔧 Otimizações de performance
-- 🐛 Correções de bugs
-
-## 📄 Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
-
-## 👥 Suporte
-
-- **Issues**: Reporte bugs via Issues do GitHub
-- **Discussões**: Use Discussions para perguntas gerais
-- **Wiki**: Documentação adicional na Wiki do projeto
 
 ## 📚 Recursos Adicionais
 
@@ -370,8 +274,6 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para d
 - [Magic Mirror Community](https://forum.magicmirror.builders/)
 
 ---
-
-## 🏆 Changelog
 
 ### v2.0.1 (2024-12-25)
 - ✅ Sistema completo de fonte bitmap
